@@ -20,7 +20,6 @@ public class HelloApplication extends Application  { //inheriting core functiona
     }
 
     public void start(Stage primaryStage) {
-
         primaryStage.setTitle("Hello GUI: Oliver Trojanowski");
 
         StackPane layout = new StackPane();
@@ -28,10 +27,16 @@ public class HelloApplication extends Application  { //inheriting core functiona
         Scene scene = new Scene(layout, 400,400);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        Label label = new Label();
+        label.setText("Hello GUI World");
+
+        layout.getChildren.add(label);
+        AnchorPane anchorPane = new AnchorPane();
     // TODO: follow steps 2-9 in README.md to create a start method
 
     // TODO: follow steps 10-21 in README.md to add objects to your layout (inside start)
 
     // TODO: follow steps 22-34 in README.md to create an event handler
-}
+    }
 }
