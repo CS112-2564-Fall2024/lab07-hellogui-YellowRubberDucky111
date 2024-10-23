@@ -1,6 +1,7 @@
 package edu.miracosta.cs112.lab07;//package name here depending on your IDE
 
 import javafx.application.Application;  //abstract class used for JavaFX GUI's
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;              //class for GUI window
 import javafx.scene.Scene;              //class for specific view in GUI window
@@ -21,18 +22,19 @@ public class HelloApplication extends Application  { //inheriting core functiona
 
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Hello GUI: Oliver Trojanowski");
-
         StackPane layout = new StackPane();
-
         Scene scene = new Scene(layout, 400,400);
         primaryStage.setScene(scene);
         primaryStage.show();
-
         Label label = new Label();
         label.setText("Hello GUI World");
-
-        layout.getChildren.add(label);
+        layout.getChildren().add(label);
         AnchorPane anchorPane = new AnchorPane();
+
+        anchorPane.setBottomAnchor(label, 0.0);
+        anchorPane.setRightAnchor(label, 0.0);
+        anchorPane.getChildren().add(label);
+        layout.getChildren().add(anchorPane);
     // TODO: follow steps 2-9 in README.md to create a start method
 
     // TODO: follow steps 10-21 in README.md to add objects to your layout (inside start)
